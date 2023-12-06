@@ -16,6 +16,7 @@
 		11F2FCD42B204D5700BEAC9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F2FCD22B204D5700BEAC9F /* LaunchScreen.storyboard */; };
 		11F2FCE72B20549A00BEAC9F /* MemoData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCE52B20549A00BEAC9F /* MemoData+CoreDataClass.swift */; };
 		11F2FCE82B20549A00BEAC9F /* MemoData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCE62B20549A00BEAC9F /* MemoData+CoreDataProperties.swift */; };
+		11F2FCF02B208FAD00BEAC9F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCEF2B208FAD00BEAC9F /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		11F2FCD52B204D5700BEAC9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F2FCE52B20549A00BEAC9F /* MemoData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		11F2FCE62B20549A00BEAC9F /* MemoData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		11F2FCEF2B208FAD00BEAC9F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		11F2FCEA2B20555E00BEAC9F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				11F2FCEF2B208FAD00BEAC9F /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F2FCCF2B204D5600BEAC9F /* AllenTodoApp.xcdatamodeld in Sources */,
+				11F2FCF02B208FAD00BEAC9F /* MainView.swift in Sources */,
 				11F2FCE72B20549A00BEAC9F /* MemoData+CoreDataClass.swift in Sources */,
 				11F2FCC92B204D5600BEAC9F /* ViewController.swift in Sources */,
 				11F2FCE82B20549A00BEAC9F /* MemoData+CoreDataProperties.swift in Sources */,
