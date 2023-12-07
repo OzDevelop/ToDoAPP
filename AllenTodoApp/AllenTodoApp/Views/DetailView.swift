@@ -14,7 +14,7 @@ class DetailView: UIView {
         button.setTitle("Red", for: .normal)
         button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.tag = 1
+        button.tag = Int(MyColor.red.rawValue)
         return button
     }()
     
@@ -23,7 +23,7 @@ class DetailView: UIView {
         button.setTitle("Green", for: .normal)
         button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.tag = 2
+        button.tag = Int(MyColor.green.rawValue)
         return button
     }()
     
@@ -32,7 +32,7 @@ class DetailView: UIView {
         button.setTitle("Blue", for: .normal)
         button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.tag = 3
+        button.tag = Int(MyColor.blue.rawValue)
         return button
     }()
     
@@ -41,7 +41,7 @@ class DetailView: UIView {
         button.setTitle("Purple", for: .normal)
         button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.tag = 4
+        button.tag = Int(MyColor.purple.rawValue)
         return button
     }()
     

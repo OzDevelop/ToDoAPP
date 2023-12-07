@@ -19,6 +19,8 @@
 		11F2FCF02B208FAD00BEAC9F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCEF2B208FAD00BEAC9F /* MainView.swift */; };
 		11F2FCF22B20938400BEAC9F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCF12B20938400BEAC9F /* DetailViewController.swift */; };
 		11F2FCF42B2096FE00BEAC9F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCF32B2096FE00BEAC9F /* DetailView.swift */; };
+		11F2FCF62B21894C00BEAC9F /* UICoror+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCF52B21894C00BEAC9F /* UICoror+Extention.swift */; };
+		11F2FCF82B2189DB00BEAC9F /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCF72B2189DB00BEAC9F /* MyColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		11F2FCEF2B208FAD00BEAC9F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		11F2FCF12B20938400BEAC9F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		11F2FCF32B2096FE00BEAC9F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		11F2FCF52B21894C00BEAC9F /* UICoror+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICoror+Extention.swift"; sourceTree = "<group>"; };
+		11F2FCF72B2189DB00BEAC9F /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 		11F2FCEC2B20557500BEAC9F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				11F2FCF52B21894C00BEAC9F /* UICoror+Extention.swift */,
+				11F2FCF72B2189DB00BEAC9F /* MyColor.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -191,8 +197,10 @@
 				11F2FCCF2B204D5600BEAC9F /* AllenTodoApp.xcdatamodeld in Sources */,
 				11F2FCF42B2096FE00BEAC9F /* DetailView.swift in Sources */,
 				11F2FCF02B208FAD00BEAC9F /* MainView.swift in Sources */,
+				11F2FCF82B2189DB00BEAC9F /* MyColor.swift in Sources */,
 				11F2FCE72B20549A00BEAC9F /* MemoData+CoreDataClass.swift in Sources */,
 				11F2FCC92B204D5600BEAC9F /* ViewController.swift in Sources */,
+				11F2FCF62B21894C00BEAC9F /* UICoror+Extention.swift in Sources */,
 				11F2FCE82B20549A00BEAC9F /* MemoData+CoreDataProperties.swift in Sources */,
 				11F2FCC52B204D5600BEAC9F /* AppDelegate.swift in Sources */,
 				11F2FCC72B204D5600BEAC9F /* SceneDelegate.swift in Sources */,
