@@ -39,8 +39,8 @@ class ViewController: UIViewController{
 
     
     @objc func plusButtonTapped() {
-        //TODO: - plus 기능 구현
         print("plus Button Tapped")
+        navigationController?.pushViewController(DetailViewController(), animated: true)
     }
 
 }
