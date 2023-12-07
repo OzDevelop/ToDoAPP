@@ -9,9 +9,8 @@ import UIKit
 
 class ViewController: UIViewController{
 
-    
-    
     private let mainView = MainView()
+    let toDoManager = CoreDataManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +32,7 @@ class ViewController: UIViewController{
     
     func setupTableView() {
         mainView.tableView.dataSource = self
-        
+        mainView.tableView.register(ToDoCell.self, forCellReuseIdentifier: "ToDoCell")
         mainView.tableView.separatorStyle = .none
     }
 
@@ -47,10 +46,17 @@ class ViewController: UIViewController{
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        print(#function)
+        return toDoManager.getTodoListFromCoreData().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(#function)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath) as! ToDoCell
+        let todoData = toDoManager.getTodoListFromCoreData()
+        
+        cell.toDoData = todoData[indexPath.row]
+        
         return UITableViewCell()
     }
 }

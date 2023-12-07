@@ -59,6 +59,12 @@ class ToDoCell: UITableViewCell {
         return sv
     }()
     
+    var toDoData: MemoData? {
+        didSet {
+            configureUIwithData()
+        }
+    }
+    
     //MARK: - init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -96,5 +102,14 @@ class ToDoCell: UITableViewCell {
             stackView.topAnchor.constraint(equalTo: backView.topAnchor, constant: 10),
             stackView.bottomAnchor.constraint(equalTo: backView.bottomAnchor, constant: -10)
         ])
+    }
+    
+    func configureUIwithData() {
+        toDoTextLabel.text = toDoData?.memoText
+        dateTextLabel.text = toDoData?.dateString
+        guard let colorNum = toDoData?.color else { return }
+        let color = MyColor(rawValue: colorNum) ?? .red
+        updateButton.backgroundColor = color.buttonColor
+        backView.backgroundColor = color.backgoundColor
     }
 }

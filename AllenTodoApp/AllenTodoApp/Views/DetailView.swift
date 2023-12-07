@@ -12,7 +12,6 @@ class DetailView: UIView {
     let redButton: UIButton = {
         let button = UIButton()
         button.setTitle("Red", for: .normal)
-        button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tag = Int(MyColor.red.rawValue)
         return button
@@ -21,7 +20,6 @@ class DetailView: UIView {
     let greenButton: UIButton = {
         let button = UIButton()
         button.setTitle("Green", for: .normal)
-        button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tag = Int(MyColor.green.rawValue)
         return button
@@ -30,7 +28,6 @@ class DetailView: UIView {
     let blueButton: UIButton = {
         let button = UIButton()
         button.setTitle("Blue", for: .normal)
-        button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tag = Int(MyColor.blue.rawValue)
         return button
@@ -39,7 +36,6 @@ class DetailView: UIView {
     let purpleButton: UIButton = {
         let button = UIButton()
         button.setTitle("Purple", for: .normal)
-        button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tag = Int(MyColor.purple.rawValue)
         return button
@@ -87,62 +83,63 @@ class DetailView: UIView {
     
     var temporaryNum: Int64? = 1
     
-    //MARK: - button action func
-    @objc func colorButtonTapped(sender: UIButton) {
-        print(sender.tag)
-        
-        self.temporaryNum = Int64(sender.tag)
-        
-        let color = MyColor(rawValue: Int64(sender.tag))
-        setupColorTheme(color: color)
-        
-        clearButtonColors()
-        setupColorButton(num: Int64(sender.tag))
-    }
-    
-    func setupColorTheme(color: MyColor? = .red) {
-        backgroundView.backgroundColor = color?.backgoundColor
-        saveButton.backgroundColor = color?.buttonColor
-    }
-    
-    func clearButtonColors() {
-        redButton.backgroundColor = MyColor.red.backgoundColor
-        redButton.setTitleColor(MyColor.red.buttonColor, for: .normal)
-        greenButton.backgroundColor = MyColor.green.backgoundColor
-        greenButton.setTitleColor(MyColor.green.buttonColor, for: .normal)
-        blueButton.backgroundColor = MyColor.blue.backgoundColor
-        blueButton.setTitleColor(MyColor.blue.buttonColor, for: .normal)
-        purpleButton.backgroundColor = MyColor.purple.backgoundColor
-        purpleButton.setTitleColor(MyColor.purple.buttonColor, for: .normal)
-    }
-    
-    func setupColorButton(num: Int64) {
-        switch num {
-        case 1:
-            redButton.backgroundColor = MyColor.red.buttonColor
-            redButton.setTitleColor(.white, for: .normal)
-        case 2:
-            greenButton.backgroundColor = MyColor.green.buttonColor
-            greenButton.setTitleColor(.white, for: .normal)
-        case 3:
-            blueButton.backgroundColor = MyColor.blue.buttonColor
-            blueButton.setTitleColor(.white, for: .normal)
-        case 4:
-            purpleButton.backgroundColor = MyColor.purple.buttonColor
-            purpleButton.setTitleColor(.white, for: .normal)
-        default:
-            redButton.backgroundColor = MyColor.red.buttonColor
-            redButton.setTitleColor(.white, for: .normal)
-        }
-
-    }
+//    //MARK: - button action func
+//    @objc func colorButtonTapped(sender: UIButton) {
+//        print(sender.tag)
+//        
+//        self.temporaryNum = Int64(sender.tag)
+//        
+//        let color = MyColor(rawValue: Int64(sender.tag))
+//        setupColorTheme(color: color)
+//        
+//        clearButtonColors()
+//        setupColorButton(num: Int64(sender.tag))
+//    }
+//    
+//    func setupColorTheme(color: MyColor? = .red) {
+//        backgroundView.backgroundColor = color?.backgoundColor
+//        saveButton.backgroundColor = color?.buttonColor
+//    }
+//    
+//    func clearButtonColors() {
+//        redButton.backgroundColor = MyColor.red.backgoundColor
+//        redButton.setTitleColor(MyColor.red.buttonColor, for: .normal)
+//        greenButton.backgroundColor = MyColor.green.backgoundColor
+//        greenButton.setTitleColor(MyColor.green.buttonColor, for: .normal)
+//        blueButton.backgroundColor = MyColor.blue.backgoundColor
+//        blueButton.setTitleColor(MyColor.blue.buttonColor, for: .normal)
+//        purpleButton.backgroundColor = MyColor.purple.backgoundColor
+//        purpleButton.setTitleColor(MyColor.purple.buttonColor, for: .normal)
+//    }
+//    
+//    func setupColorButton(num: Int64) {
+//        switch num {
+//        case 1:
+//            redButton.backgroundColor = MyColor.red.buttonColor
+//            redButton.setTitleColor(.white, for: .normal)
+//        case 2:
+//            greenButton.backgroundColor = MyColor.green.buttonColor
+//            greenButton.setTitleColor(.white, for: .normal)
+//        case 3:
+//            blueButton.backgroundColor = MyColor.blue.buttonColor
+//            blueButton.setTitleColor(.white, for: .normal)
+//        case 4:
+//            purpleButton.backgroundColor = MyColor.purple.buttonColor
+//            purpleButton.setTitleColor(.white, for: .normal)
+//        default:
+//            redButton.backgroundColor = MyColor.red.buttonColor
+//            redButton.setTitleColor(.white, for: .normal)
+//        }
+//    }
+//    
+//    @objc func saveButtonTapped() {
+//        
+//    }
     
     //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        clearButtonColors()
-        setupColorTheme()
+
         setupStackViewLayout()
         setupLayout()
         
