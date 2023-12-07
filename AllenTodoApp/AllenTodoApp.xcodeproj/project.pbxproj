@@ -22,6 +22,7 @@
 		11F2FCF62B21894C00BEAC9F /* UICoror+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCF52B21894C00BEAC9F /* UICoror+Extention.swift */; };
 		11F2FCF82B2189DB00BEAC9F /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCF72B2189DB00BEAC9F /* MyColor.swift */; };
 		11F2FCFA2B21945000BEAC9F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCF92B21945000BEAC9F /* CoreDataManager.swift */; };
+		11F2FCFC2B21A19300BEAC9F /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCFB2B21A19300BEAC9F /* ToDoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		11F2FCF52B21894C00BEAC9F /* UICoror+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICoror+Extention.swift"; sourceTree = "<group>"; };
 		11F2FCF72B2189DB00BEAC9F /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
 		11F2FCF92B21945000BEAC9F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		11F2FCFB2B21A19300BEAC9F /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		11F2FCEA2B20555E00BEAC9F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				11F2FCFB2B21A19300BEAC9F /* ToDoCell.swift */,
 				11F2FCEF2B208FAD00BEAC9F /* MainView.swift */,
 				11F2FCF32B2096FE00BEAC9F /* DetailView.swift */,
 			);
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F2FCCF2B204D5600BEAC9F /* AllenTodoApp.xcdatamodeld in Sources */,
+				11F2FCFC2B21A19300BEAC9F /* ToDoCell.swift in Sources */,
 				11F2FCF42B2096FE00BEAC9F /* DetailView.swift in Sources */,
 				11F2FCF02B208FAD00BEAC9F /* MainView.swift in Sources */,
 				11F2FCF82B2189DB00BEAC9F /* MyColor.swift in Sources */,
