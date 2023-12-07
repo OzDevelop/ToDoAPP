@@ -12,36 +12,36 @@ class DetailView: UIView {
     private let redButton: UIButton = {
         let button = UIButton()
         button.setTitle("Red", for: .normal)
-        button.addTarget(DetailView.self, action: #selector(colorButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-
+        button.tag = 1
         return button
     }()
     
     private let greenButton: UIButton = {
         let button = UIButton()
         button.setTitle("Green", for: .normal)
-        button.addTarget(DetailView.self, action: #selector(colorButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        
+        button.tag = 2
         return button
     }()
     
     private let blueButton: UIButton = {
         let button = UIButton()
         button.setTitle("Blue", for: .normal)
-        button.addTarget(DetailView.self, action: #selector(colorButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        
+        button.tag = 3
         return button
     }()
     
     private let purpleButton: UIButton = {
         let button = UIButton()
         button.setTitle("Purple", for: .normal)
-        button.addTarget(DetailView.self, action: #selector(colorButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        
+        button.tag = 4
         return button
     }()
     
@@ -87,8 +87,8 @@ class DetailView: UIView {
     }()
     
     //MARK: - button action func
-    @objc func colorButtonTapped() {
-        print(self.tag)
+    @objc func colorButtonTapped(sender: UIButton) {
+        print(sender.tag)
     }
     
     //MARK: - init
