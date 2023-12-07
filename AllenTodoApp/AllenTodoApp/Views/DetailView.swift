@@ -9,7 +9,7 @@ import UIKit
 
 class DetailView: UIView {
 
-    private let redButton: UIButton = {
+    let redButton: UIButton = {
         let button = UIButton()
         button.setTitle("Red", for: .normal)
         button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
@@ -18,7 +18,7 @@ class DetailView: UIView {
         return button
     }()
     
-    private let greenButton: UIButton = {
+    let greenButton: UIButton = {
         let button = UIButton()
         button.setTitle("Green", for: .normal)
         button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
@@ -27,7 +27,7 @@ class DetailView: UIView {
         return button
     }()
     
-    private let blueButton: UIButton = {
+    let blueButton: UIButton = {
         let button = UIButton()
         button.setTitle("Blue", for: .normal)
         button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
@@ -36,7 +36,7 @@ class DetailView: UIView {
         return button
     }()
     
-    private let purpleButton: UIButton = {
+    let purpleButton: UIButton = {
         let button = UIButton()
         button.setTitle("Purple", for: .normal)
         button.addTarget(self, action: #selector(colorButtonTapped), for: .touchUpInside)
@@ -47,7 +47,7 @@ class DetailView: UIView {
     
     lazy var buttons: [UIButton] = [redButton, greenButton, blueButton, purpleButton]
     
-    private let mainTextView: UITextView = {
+    let mainTextView: UITextView = {
         let textView = UITextView()
         textView.backgroundColor = .clear
         textView.translatesAutoresizingMaskIntoConstraints = false

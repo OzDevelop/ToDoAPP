@@ -21,6 +21,7 @@
 		11F2FCF42B2096FE00BEAC9F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCF32B2096FE00BEAC9F /* DetailView.swift */; };
 		11F2FCF62B21894C00BEAC9F /* UICoror+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCF52B21894C00BEAC9F /* UICoror+Extention.swift */; };
 		11F2FCF82B2189DB00BEAC9F /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCF72B2189DB00BEAC9F /* MyColor.swift */; };
+		11F2FCFA2B21945000BEAC9F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2FCF92B21945000BEAC9F /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		11F2FCF32B2096FE00BEAC9F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		11F2FCF52B21894C00BEAC9F /* UICoror+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICoror+Extention.swift"; sourceTree = "<group>"; };
 		11F2FCF72B2189DB00BEAC9F /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
+		11F2FCF92B21945000BEAC9F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				11F2FCE52B20549A00BEAC9F /* MemoData+CoreDataClass.swift */,
 				11F2FCE62B20549A00BEAC9F /* MemoData+CoreDataProperties.swift */,
+				11F2FCF92B21945000BEAC9F /* CoreDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				11F2FCF82B2189DB00BEAC9F /* MyColor.swift in Sources */,
 				11F2FCE72B20549A00BEAC9F /* MemoData+CoreDataClass.swift in Sources */,
 				11F2FCC92B204D5600BEAC9F /* ViewController.swift in Sources */,
+				11F2FCFA2B21945000BEAC9F /* CoreDataManager.swift in Sources */,
 				11F2FCF62B21894C00BEAC9F /* UICoror+Extention.swift in Sources */,
 				11F2FCE82B20549A00BEAC9F /* MemoData+CoreDataProperties.swift in Sources */,
 				11F2FCC52B204D5600BEAC9F /* AppDelegate.swift in Sources */,
