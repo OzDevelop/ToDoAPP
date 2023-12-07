@@ -14,22 +14,17 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = detailView
-        view.backgroundColor = .gray
+        view.backgroundColor = .systemBackground
         // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
-        
+        super.viewDidLayoutSubviews()
+        detailView.buttons.forEach { button in
+            button.clipsToBounds = true
+            button.layer.cornerRadius = button.bounds.height / 2
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

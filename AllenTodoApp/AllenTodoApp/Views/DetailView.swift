@@ -57,7 +57,6 @@ class DetailView: UIView {
     
     let backgroundView: UIView = {
         let view = UIView()
-        view.backgroundColor = .red
         view.clipsToBounds = true
         view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -86,17 +85,67 @@ class DetailView: UIView {
         return stView
     }()
     
+    var temporaryNum: Int64? = 1
+    
     //MARK: - button action func
     @objc func colorButtonTapped(sender: UIButton) {
         print(sender.tag)
+        
+        self.temporaryNum = Int64(sender.tag)
+        
+        let color = MyColor(rawValue: Int64(sender.tag))
+        setupColorTheme(color: color)
+        
+        clearButtonColors()
+        setupColorButton(num: Int64(sender.tag))
+    }
+    
+    func setupColorTheme(color: MyColor? = .red) {
+        backgroundView.backgroundColor = color?.backgoundColor
+        saveButton.backgroundColor = color?.buttonColor
+    }
+    
+    func clearButtonColors() {
+        redButton.backgroundColor = MyColor.red.backgoundColor
+        redButton.setTitleColor(MyColor.red.buttonColor, for: .normal)
+        greenButton.backgroundColor = MyColor.green.backgoundColor
+        greenButton.setTitleColor(MyColor.green.buttonColor, for: .normal)
+        blueButton.backgroundColor = MyColor.blue.backgoundColor
+        blueButton.setTitleColor(MyColor.blue.buttonColor, for: .normal)
+        purpleButton.backgroundColor = MyColor.purple.backgoundColor
+        purpleButton.setTitleColor(MyColor.purple.buttonColor, for: .normal)
+    }
+    
+    func setupColorButton(num: Int64) {
+        switch num {
+        case 1:
+            redButton.backgroundColor = MyColor.red.buttonColor
+            redButton.setTitleColor(.white, for: .normal)
+        case 2:
+            greenButton.backgroundColor = MyColor.green.buttonColor
+            greenButton.setTitleColor(.white, for: .normal)
+        case 3:
+            blueButton.backgroundColor = MyColor.blue.buttonColor
+            blueButton.setTitleColor(.white, for: .normal)
+        case 4:
+            purpleButton.backgroundColor = MyColor.purple.buttonColor
+            purpleButton.setTitleColor(.white, for: .normal)
+        default:
+            redButton.backgroundColor = MyColor.red.buttonColor
+            redButton.setTitleColor(.white, for: .normal)
+        }
+
     }
     
     //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        clearButtonColors()
+        setupColorTheme()
         setupStackViewLayout()
         setupLayout()
+        
     }
     
     required init?(coder: NSCoder) {
