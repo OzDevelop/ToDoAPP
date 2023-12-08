@@ -12,12 +12,20 @@ class ViewController: UIViewController{
     private let mainView = MainView()
     let toDoManager = CoreDataManager.shared
 
+    
+    //MARK: - ViewDidLoad(), viewWillAppear()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view = MainView()
+        view = mainView
         
         setupNaviBar()
+        setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+            self.mainView.tableView.reloadData()
     }
     
     //MARK: - setup 메서드
@@ -32,21 +40,22 @@ class ViewController: UIViewController{
     
     func setupTableView() {
         mainView.tableView.dataSource = self
+        mainView.tableView.delegate = self
         mainView.tableView.register(ToDoCell.self, forCellReuseIdentifier: "ToDoCell")
-        mainView.tableView.separatorStyle = .none
+        
+//        mainView.tableView.separatorStyle = .none
     }
 
     
     @objc func plusButtonTapped() {
-        print("plus Button Tapped")
         navigationController?.pushViewController(DetailViewController(), animated: true)
     }
-
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(#function)
+        print(toDoManager.getTodoListFromCoreData().count)
         return toDoManager.getTodoListFromCoreData().count
     }
     
@@ -57,6 +66,9 @@ extension ViewController: UITableViewDataSource {
         
         cell.toDoData = todoData[indexPath.row]
         
-        return UITableViewCell()
+        return cell
     }
+}
+
+extension ViewController: UITableViewDelegate {
 }

@@ -17,9 +17,11 @@ class MainView: UIView {
         return tableView
     }()
     
+    //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        setupLayout()
         self.backgroundColor = .systemBackground
         
     }
@@ -28,14 +30,15 @@ class MainView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - setupLayout()
     func setupLayout() {
         self.addSubview(tableView)
-        
+        print("mainView setup 실행")
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            tableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }
