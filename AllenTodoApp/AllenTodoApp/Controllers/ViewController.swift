@@ -43,7 +43,7 @@ class ViewController: UIViewController{
         mainView.tableView.delegate = self
         mainView.tableView.register(ToDoCell.self, forCellReuseIdentifier: "ToDoCell")
         
-//        mainView.tableView.separatorStyle = .none
+        mainView.tableView.separatorStyle = .none
     }
 
     
@@ -64,6 +64,8 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath) as! ToDoCell
         let todoData = toDoManager.getTodoListFromCoreData()
         
+        cell.selectionStyle = .none
+
         cell.toDoData = todoData[indexPath.row]
         
         return cell
@@ -71,4 +73,10 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
+    
+    
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+////        return UITableView.automaticDimension
+//        return 150
+//    }
 }
